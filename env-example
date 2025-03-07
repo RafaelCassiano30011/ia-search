@@ -1,2 +1,2 @@
-NODE_ENV="dev"
-DATABASE_URL="./db/app.db"
+NODE_ENV="dev | prod | test"
+DATABASE_URL="postgresql://username:password@localhost:port/name-db?schema=public"
