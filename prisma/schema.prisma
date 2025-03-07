@@ -14,10 +14,12 @@ datasource db {
 }
 
 model Store {
-  id      String    @id @default(cuid())
-  name    String
-  segment String
-  Product Product[]
+  id        String    @id @default(cuid())
+  account   String    @unique
+  plataform String
+  name      String
+  segment   String
+  Product   Product[]
 
   @@map("stores")
 }
