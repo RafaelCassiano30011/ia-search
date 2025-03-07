@@ -1,0 +1,11 @@
+version: "3"
+
+services: 
+  ia-search:
+    image: bitnami/postgresql
+    ports:
+      - 5432:5432
+    environment:
+      - POSTGRESQL_USERNAME=docker
+      - POSTGRESQL_PASSWORD=DOCKER
+      - POSTGRESQL_DATABASE=ia-search 
