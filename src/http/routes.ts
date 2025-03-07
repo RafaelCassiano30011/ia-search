@@ -5,7 +5,9 @@ const appRoutes = async (app: FastifyInstance) => {
   app.get("/store", () => {
     return { message: "Store route" };
   });
-  app.post("/store", registerStore)
+  app.post("/store", registerStore);
+
+  app.post("/store/products", () => {});
 };
 
 export { appRoutes };
