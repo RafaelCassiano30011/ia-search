@@ -12,17 +12,21 @@ function vtex({ account, appKey, appToken }: VtexProvider) {
     },
   });
 
-  async function getAllProducts(page: number = 1): Promise<any> {
+  async function getAllSkus(page: number = 1): Promise<any> {
     const pagezise = 1000;
     const { data } = await api.get(`/api/catalog_system/pvt/sku/stockkeepingunitids?page=${page}&pagesize=${pagezise}`);
 
     console.log(data);
 
     if (data.length === pagezise) {
-      return [...data, ...(await getAllProducts(page + 1))];
+      return [...data, ...(await getAllSkus(page + 1))];
     }
 
     return data;
+  }
+
+  async function getAllProducts(): Promise<void> {
+    const skus = await getAllSkus();
   }
 
   return {
