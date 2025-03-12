@@ -1,5 +1,5 @@
 import { StoreRepository } from "@/repositories/store-repository";
-import { StoreWithAccountAlreadyExist } from "./error/store-with-account-already-exist";
+import { StoreWithAccountAlreadyExist } from "./error/store-with-account-already-exists";
 
 export interface RegisterStoreUseCaseProps {
   name: string;

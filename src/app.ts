@@ -14,9 +14,7 @@ app.setErrorHandler((error, req, res) => {
 
   if (env.NODE_ENV !== "prod") {
     console.error(error);
-  } else {
-    // TODO log Datadog / Sentry
   }
 
-  return res.status(500).send({ message: "Internal server error" });
+  return res.status(500).send({ message: error.message });
 });

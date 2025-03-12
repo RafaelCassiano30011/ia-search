@@ -1,4 +1,4 @@
-import { StoreWithAccountAlreadyExist } from "@/useCases/error/store-with-account-already-exist";
+import { StoreWithAccountAlreadyExist } from "@/useCases/error/store-with-account-already-exists";
 import { makeRegisterStoreUseCase } from "@/useCases/factories/make-register-store-use-case";
 import { FastifyRequest, FastifyReply } from "fastify";
 import { z } from "zod";

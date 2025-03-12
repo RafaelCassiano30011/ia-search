@@ -1,6 +1,7 @@
 import { Prisma, Store } from "@prisma/client";
 import { prisma } from "@/lib/prisma";
 import { StoreRepository } from "../store-repository";
+import { encrypt } from "@/utils/encrypt";
 
 export class PrismaStoreRepository implements StoreRepository {
   async create(data: Prisma.StoreCreateInput): Promise<Store> {

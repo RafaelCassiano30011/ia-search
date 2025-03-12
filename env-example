@@ -1,2 +1,4 @@
 NODE_ENV="dev | prod | test"
 DATABASE_URL="postgresql://username:password@localhost:port/name-db?schema=public"
+ENCRYPTION_KEY=EXEMPLO
+ENCRYPTION_IV_LENGTH=16

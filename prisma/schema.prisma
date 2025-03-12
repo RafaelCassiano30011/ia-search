@@ -21,6 +21,9 @@ model Store {
   segment   String
   Product   Product[]
 
+  appKey   String?
+  appToken String?
+
   @@map("stores")
 }
 
