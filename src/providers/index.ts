@@ -8,7 +8,7 @@ export interface ProviderProps {
 
 interface Providers {
   [key: string]: (props: ProviderProps) => {
-    getAllProducts: () => Promise<void>;
+    getAllProducts: (files: any[]) => Promise<any>;
   };
 }
 
